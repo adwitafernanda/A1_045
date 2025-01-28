@@ -125,7 +125,7 @@ fun HomeStatus(
         is HomeUiState.Success ->
             if(homeUiState.tim.isEmpty()){
                 return Box(modifier = modifier.fillMaxSize(),contentAlignment = Alignment.Center){
-                    Text(text = "Tidak ada data Kontak")
+                    Text(text = "Tidak ada data Tim")
                 }
             }else {
                 TmLayout(

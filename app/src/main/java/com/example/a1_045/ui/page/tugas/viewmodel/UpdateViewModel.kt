@@ -31,11 +31,9 @@ class UpdateTugasViewModel(
     var timList by mutableStateOf(listOf<Tim>())
         private set
 
-    // ID tugas yang diterima dari SavedStateHandle
     private val idtugas: String = checkNotNull(savedStateHandle[DestinasiUpdateTugas.IDTugas])
 
     init {
-        // Mengambil data tugas berdasarkan ID tugas dan proyek/tim
         viewModelScope.launch {
             updateUiState = tgs.getTugasbyid(idtugas).toUiStateTugas()
         }

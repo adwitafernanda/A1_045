@@ -125,7 +125,7 @@ fun HomeStatus(
         is HomeUiState.Success ->
             if(homeUiState.proyek.isEmpty()){
                 return Box(modifier = modifier.fillMaxSize(),contentAlignment = Alignment.Center){
-                    Text(text = "Tidak ada data Kontak")
+                    Text(text = "Tidak ada data Proyek")
                 }
             }else {
                 PykLayout(
